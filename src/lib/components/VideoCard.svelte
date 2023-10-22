@@ -3,7 +3,7 @@
 
 <a href="/">
 	<div class="relative">
-		<div>10:20</div>
+		<div class="absolute bg-black/80 text-white bottom-1 right-1 text-xs px-1 font-semibold rounded-md">10:20</div>
 		<img
 			src="/thumbnail.webp"
 			alt=""
