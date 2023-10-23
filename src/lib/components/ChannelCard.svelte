@@ -9,5 +9,5 @@
         <p class="text-gray-600 text-xs">welcome to my channel, where we talk about movies</p>
     </div>
 
-    <button class="bg-black text-white text-sm ml-auto font-medium rounded-full py-2 px-4">Subscribe</button>
+    <button class="bg-black w-fit text-white text-sm ml-auto font-medium rounded-full py-2 px-4">Subscribe</button>
 </a>
