@@ -1,13 +1,24 @@
-<a href="/" class="flex gap-4 items-center">
-    <div class="max-w-[360px] w-full flex items-center justify-center">
-        <img src="/avatar.png" alt="" class="w-[136px] h-[136px] rounded-full">
-    </div>
+<script lang="ts">
+	export let title: string;
+	export let userName: string;
+	export let descriptionSnippet: string;
+	export let subscribers: string;
+	export let avatar: string;
+</script>
 
-    <div>
-        <h1 class="capitalize font-medium text-lg mb-2">Jack Philips</h1>
-        <p class="text-gray-600 text-xs mb-1">@Stewart . 32 subscribers</p>
-        <p class="text-gray-600 text-xs">welcome to my channel, where we talk about movies</p>
-    </div>
+<div class="flex gap-4 items-center">
+	<div class="max-w-[360px] w-full flex items-center justify-center">
+		<img src={avatar} alt="" class="w-[136px] h-[136px] rounded-full" />
+	</div>
 
-    <button class="bg-black w-fit text-white text-sm ml-auto font-medium rounded-full py-2 px-4">Subscribe</button>
-</a>
+	<div>
+		<h1 class="capitalize font-medium text-lg mb-2">{title}</h1>
+		<p class="text-gray-600 text-xs mb-1">{userName} . {subscribers || ''}</p>
+		<p class="text-gray-600 text-xs">{descriptionSnippet || ''}</p>
+	</div>
+
+	<button class="bg-black w-fit text-white text-sm ml-auto font-medium rounded-full py-2 px-4"
+		>Subscribe</button
+	>
+</div>
+<hr />

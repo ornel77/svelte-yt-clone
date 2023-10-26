@@ -26,7 +26,7 @@
 			class="flex items-center justify-center flex-col gap-1 py-4 hover:bg-gray-100 rounded-lg"
 		>
 			<img src={`/icons/${link.icon}.svg`} alt={link.title} />
-			<p>{link.title}</p>
+			<p class="text-xs capitalize">{link.title}</p>
 		</a>
 	{/each}
 </div>

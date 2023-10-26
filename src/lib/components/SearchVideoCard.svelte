@@ -1,21 +1,29 @@
-<a href="/" class="flex gap-4">
-	<img
-		src="/thumbnail.webp"
-		alt=""
-		class="max-w-[360px] object-cover aspect-video rounded-2xl w-full"
-	/>
+<script lang="ts">
+	export let title: string;
+	export let publishedTimeText: string;
+	export let avatar: string;
+	export let descriptionSnippet: string;
+	export let thumbnail: string;
+	export let channelName: string;
+	export let videoId: string;
+	export let badges: string;
+	export let views: number;
+</script>
+
+<a href="/{videoId}" class="flex gap-4">
+	<img src={thumbnail} alt="" class="max-w-[360px] object-cover aspect-video rounded-2xl w-full" />
 	<div class="text-gray-700">
-		<h1 class="capitalize font-medium text-lg text-black">next.js is great</h1>
-		<p class="text-xs mb-1">10mil . 2hrs ago</p>
+		<h1 class="capitalize font-medium text-lg text-black">{title}</h1>
+		<p class="text-xs mb-1">{views} views . {publishedTimeText}</p>
 		<div class="flex items-center gap-2 my-4">
-			<img src="/avatar.png" alt="" class="w-6 h-6 rounded-full" />
-			<p class="capitalize text-xs">jack philips</p>
+			<img src={avatar} alt="" class="w-6 h-6 rounded-full" />
+			<p class="capitalize text-xs">{channelName}</p>
 		</div>
-		<p class="text-xs">welcome to my channel</p>
+		<p class="text-xs">{descriptionSnippet}</p>
 		<div class="flex items-center gap-2 mt-3">
-			<p class="rounded bg-gray-200 text-gray-800 text-xs font-semibold py-0.5 px-1">4K</p>
-			<p class="rounded bg-gray-200 text-gray-800 text-xs font-semibold py-0.5 px-1">4K</p>
-			<p class="rounded bg-gray-200 text-gray-800 text-xs font-semibold py-0.5 px-1">4K</p>
+			{#each badges as badge}
+				<p class="rounded bg-gray-200 text-gray-800 text-xs font-semibold py-0.5 px-1">{badge}</p>
+			{/each}
 		</div>
 	</div>
 </a>
