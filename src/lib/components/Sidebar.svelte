@@ -19,7 +19,7 @@
 	];
 </script>
 
-<div class="bg-white py-2 flex flex-col px-1 fixed top-[60px]">
+<div class="bg-white py-2 hidden md:flex flex flex-col px-1 fixed top-[60px]">
 	{#each nav as link}
 		<a
 			href="/"
